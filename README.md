@@ -3,6 +3,10 @@
 [![Preprint - arXiv](https://img.shields.io/badge/Preprint-arXiv-red)](https://arxiv.org/abs/2505.05597)
 [![Preprint - arXiv](https://img.shields.io/badge/Accepted_to-3rd_World_XAI_Conference-blue)](https://xaiworldconference.com/2025/)
 
+[**Jacek Karolczak**](https://github.com/jkarolczak),
+[**Jerzy Stefanowski**](https://www.cs.put.poznan.pl/jstefanowski/) <br>
+Poznan Universtiy of Technology
+
 ## Abstract
 
 Although prototype-based explanations provide a human-understandable way of representing model predictions they often
