@@ -125,8 +125,8 @@ def main(random_state: int) -> None:
     explainers = ["APete", "G_KM", "SM_A"]
     datasets = ["apple_quality", "australia_rain", "breast_cancer", "diabetes", "passenger_satisfaction", "wine_quality"]
 
-    fig = plt.figure(constrained_layout=True, figsize=(14.8, 8), dpi=300)
-    subfigs = fig.subfigures(len(explainers), 1, wspace=0.05, hspace=0.1)
+    fig = plt.figure(constrained_layout=True, figsize=(14.8, 6.5), dpi=300)
+    subfigs = fig.subfigures(len(explainers), 1, wspace=0.01, hspace=0.01)
     fig.supylabel("Frequency of occurrence in masks", fontsize=15)
 
     colors = cmc.batlowS(np.linspace(0, 1, 10))
@@ -154,7 +154,8 @@ def main(random_state: int) -> None:
             else:
                 ax.set_title(" ", fontsize=15)
 
-    fig.legend(handles=[fi, raw], title="Strategy", bbox_to_anchor=(1.0, 0.71), fontsize=15).get_title().set_fontsize(15)
+    fig.legend(handles=[fi, raw], title="Strategy", bbox_to_anchor=(1.0, 0.70), ncols=2, fontsize=15
+               ).get_title().set_fontsize(15)
 
     fig.supxlabel("Feature Index")
     plt.savefig("results_activating_features.png")

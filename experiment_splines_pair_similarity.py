@@ -102,8 +102,8 @@ def main(random_state: int) -> None:
     explainers = ["APete", "G_KM", "SM_A"]
     datasets = ["apple_quality", "australia_rain", "breast_cancer", "diabetes", "passenger_satisfaction", "wine_quality"]
 
-    fig = plt.figure(constrained_layout=True, figsize=(14.8, 8), dpi=300)
-    subfigs = fig.subfigures(len(explainers), 1, wspace=0.05, hspace=0.1)
+    fig = plt.figure(constrained_layout=True, figsize=(14.8, 6.5), dpi=300)
+    subfigs = fig.subfigures(len(explainers), 1, wspace=0.05, hspace=0.05)
 
     colors = cmc.batlowS(np.linspace(0, 1, 10))
     color_len = colors[0]
@@ -166,8 +166,8 @@ def main(random_state: int) -> None:
                 line_labels.extend([line_fi, line_raw, line_len_fi, line_len_raw])
 
     fig.supxlabel("$\\beta$", fontsize=15)
-    fig.legend(handles=line_labels, title="Lines", ncols=2, bbox_to_anchor=(1.0, 0.73),
-               fontsize=12).get_title().set_fontsize(12)
+    fig.legend(handles=line_labels, title="Lines", ncols=2, bbox_to_anchor=(0.98, 0.74),
+               fontsize=15).get_title().set_fontsize(15)
     plt.savefig("results_pair_similarity.png")
 
 

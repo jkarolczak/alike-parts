@@ -102,10 +102,10 @@ def main(random_state: int) -> None:
     datasets = ["apple_quality", "australia_rain", "breast_cancer", "diabetes", "passenger_satisfaction", "wine_quality"]
     x2_name = "beta"
 
-    fig = plt.figure(constrained_layout=True, figsize=(14.8, 9), dpi=300)
+    fig = plt.figure(constrained_layout=True, figsize=(14.8, 6.5), dpi=300)
     fig.supylabel("$\\beta$", fontsize=15)
 
-    subfigs = fig.subfigures(len(explainers), 1, wspace=0.1, hspace=0.1)
+    subfigs = fig.subfigures(len(explainers), 1, wspace=0.05)
 
     df = pd.DataFrame(columns=datasets,
                       index=pd.MultiIndex.from_product([explainers, ["fi", "raw"]], names=["explainer", "method"]))
