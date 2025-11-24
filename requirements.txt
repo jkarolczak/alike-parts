@@ -1,6 +1,9 @@
 cmcrameri
+kneed
+lime
 matplotlib
 optuna
 pandas
 scikit-learn
 shap
+treeinterpreter

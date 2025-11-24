@@ -224,7 +224,7 @@ def wine_quality(
     )
 
 
-def get_dataset(name: Literal["diabetes"], random_state: int = 42
+def get_dataset(name: TDataset, random_state: int = 42
                 ) -> tuple[pd.DataFrame, pd.Series, pd.DataFrame, pd.Series, pd.DataFrame, pd.Series]:
     """Load dataset and split it into train, validation and test sets.
 
