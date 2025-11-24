@@ -25,6 +25,8 @@ class APete(SM_A):
 
         y = pd.Series(self.model.predict(x)) if y is None else y
 
+        x, y = self._sample(x, y)
+        
         prev_improvement = 0.0
         classes = y.unique()
         prototypes = {cls.item(): [] for cls in classes}

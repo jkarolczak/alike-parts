@@ -48,6 +48,8 @@ class SM_A(IExplainer):
 
         y = pd.Series(self.model.predict(x)) if y is None else y
 
+        x, y = self._sample(x, y)
+
         classes = y.unique()
         prototypes = {cls.item(): [] for cls in classes}
         distances = {cls: self._tree_distance_matrix(x[y == cls]) for cls in classes}
